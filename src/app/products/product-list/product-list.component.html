@@ -1,11 +1,18 @@
 <mat-drawer-container [autosize]="true" class="min-h-full max-w-7x1 mx-auto border-x">
-    
+
     <mat-drawer mode="side" opened class="p-6">
         <div>Filters</div>
     </mat-drawer>
-    
-    <mat-drawer-content class="p-6">
+
+    <!-- <mat-drawer-content class="p-6">
         <app-filterbar></app-filterbar>
+    </mat-drawer-content> -->
+
+    <mat-drawer-content class="productList p-6">
+      <mat-card class="productList__product" *ngFor="let product of products; index as i">
+        <h4>{{product.title}}&nbsp;<small>{{product.category}}</small></h4>
+        <p>{{product.price}}</p>
+      </mat-card>
     </mat-drawer-content>
 
 </mat-drawer-container>

@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -10,8 +11,9 @@ import { ProductsRoutingModule } from './products-routing.module';
   declarations: [],
   imports: [
     CommonModule,
+    HttpClientModule,
     ProductsRoutingModule
   ],
-  providers: [ProductsService]
+  providers: [ProductsService, HttpClient]
 })
 export class ProductsModule { }
